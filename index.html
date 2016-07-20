@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Numeric Sequence Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Numeric Sequence Calculator</h1>
+
+        <div class="form-group">
+            <label for="user-input">Please enter a number</label>
+            <input
+                v-model="userInput"
+                type="number"
+                id="user-input"
+                class="form-control"
+            >
+        </div>
+
+        <div>All numbers: {{allNumbers}}</div>
+        <div>Odd numbers: {{oddNumbers}}</div>
+        <div>Even numbers: {{evenNumbers}}</div>
+    </div>
+
+    <script src="js/vue.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
