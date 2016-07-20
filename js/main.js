@@ -75,7 +75,7 @@ new Vue({
 
     },
     data: {
-        userInput: 40,
+        userInput: 90,
     },
     methods: {
         isOdd: function (number) {
