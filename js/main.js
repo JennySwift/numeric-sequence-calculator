@@ -59,9 +59,23 @@ new Vue({
 
             return array;
         },
+        errors: function () {
+            var array = [];
+
+            if (this.userInput < 0) {
+                array.push("The input field only accepts positive numbers.")
+            }
+
+            if (!Number.isInteger(this.userInput * 1)) {
+                array.push("The input field only accepts whole numbers.")
+            }
+            
+            return array;
+        },
+
     },
     data: {
-        userInput: 40
+        userInput: 40,
     },
     methods: {
         isOdd: function (number) {
