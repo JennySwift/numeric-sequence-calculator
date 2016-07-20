@@ -37,8 +37,7 @@
             <div class="panel-heading">All numbers</div>
             <div class="panel-body">
                 <span v-for="number in allNumbers" v-if="allNumbers.length > 0">
-                    <span v-if="$index !== allNumbers.length - 1">{{number}}, </span>
-                    <span v-else>{{number}}</span>
+                    <span>{{number}}</span><span v-if="$index !== allNumbers.length - 1">, </span>
                 </span>
             </div>
         </div>
@@ -47,8 +46,7 @@
             <div class="panel-heading">Odd numbers</div>
             <div class="panel-body">
                 <span v-for="number in oddNumbers" v-if="oddNumbers.length > 0">
-                    <span v-if="$index !== oddNumbers.length - 1">{{number}}, </span>
-                    <span v-else>{{number}}</span>
+                    <span>{{number}}</span><span v-if="$index !== oddNumbers.length - 1">, </span>
                 </span>
             </div>
         </div>
@@ -57,8 +55,7 @@
             <div class="panel-heading">Even numbers</div>
             <div class="panel-body">
                 <span v-for="number in evenNumbers" v-if="evenNumbers.length > 0">
-                    <span v-if="$index !== evenNumbers.length - 1">{{number}}, </span>
-                    <span v-else>{{number}}</span>
+                    <span>{{number}}</span><span v-if="$index !== evenNumbers.length - 1">, </span>
                 </span>
             </div>
         </div>
@@ -67,8 +64,7 @@
             <div class="panel-heading">Numbers with letter replacements</div>
             <div class="panel-body">
                 <span v-for="number in numbersWithLetterReplacements" v-if="numbersWithLetterReplacements.length > 0" track-by="$index">
-                    <span v-if="$index !== numbersWithLetterReplacements.length - 1">{{number}}, </span>
-                    <span v-else>{{number}}</span>
+                    <span>{{number}}</span><span v-if="$index !== numbersWithLetterReplacements.length - 1">, </span>
                 </span>
             </div>
         </div>
@@ -77,8 +73,7 @@
             <div class="panel-heading">Fibonacci numbers</div>
             <div class="panel-body">
                 <span v-for="number in fibonacciNumbers" v-if="fibonacciNumbers.length > 0">
-                    <span v-if="$index !== fibonacciNumbers.length - 1">{{number}}, </span>
-                    <span v-else>{{number}}</span>
+                    <span>{{number}}</span><span v-if="$index !== fibonacciNumbers.length - 1">, </span>
                 </span>
             </div>
         </div>

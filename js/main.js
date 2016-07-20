@@ -46,7 +46,6 @@ new Vue({
                 }
             }
 
-            console.log(array);
             return array;
         },
         fibonacciNumbers: function () {
@@ -76,7 +75,7 @@ new Vue({
 
     },
     data: {
-        userInput: 7,
+        userInput: 90,
     },
     methods: {
         isOdd: function (number) {
