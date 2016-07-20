@@ -48,9 +48,20 @@ new Vue({
 
             return array;
         },
+        fibonacciNumbers: function () {
+            var array = [0,1,1];
+            var nextFibonacciNumber = this.getNextFibonacciNumber(array);
+
+            while (nextFibonacciNumber <= this.userInput) {
+                array.push(nextFibonacciNumber);
+                nextFibonacciNumber = this.getNextFibonacciNumber(array);
+            }
+
+            return array;
+        },
     },
     data: {
-        userInput: 5
+        userInput: 40
     },
     methods: {
         isOdd: function (number) {
@@ -58,6 +69,9 @@ new Vue({
         },
         isMultipleOf: function (number, multipleOf) {
             return number % multipleOf === 0;
+        },
+        getNextFibonacciNumber: function (array) {
+            return array[array.length - 1] + array[array.length - 2];
         }
     }
 });
