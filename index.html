@@ -17,7 +17,7 @@
         </div>
 
         <div class="form-group">
-            <label for="user-input">Please enter a number</label>
+            <label for="user-input">Please enter a positive, whole number</label>
             <input
                 v-model="userInput"
                 type="number"
@@ -27,7 +27,7 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">All numbers</div>
+            <div class="panel-heading">All numbers up to and including the given number</div>
             <div class="panel-body">
                 <span v-for="number in allNumbers" v-if="allNumbers.length > 0">
                     <span>{{number}}</span><span v-if="$index !== allNumbers.length - 1">, </span>
@@ -36,7 +36,7 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">Odd numbers</div>
+            <div class="panel-heading">All odd numbers up to and including the given number</div>
             <div class="panel-body">
                 <span v-for="number in oddNumbers" v-if="oddNumbers.length > 0">
                     <span>{{number}}</span><span v-if="$index !== oddNumbers.length - 1">, </span>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">Even numbers</div>
+            <div class="panel-heading">All even numbers up to and including the given number</div>
             <div class="panel-body">
                 <span v-for="number in evenNumbers" v-if="evenNumbers.length > 0">
                     <span>{{number}}</span><span v-if="$index !== evenNumbers.length - 1">, </span>
@@ -54,7 +54,7 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">Numbers with letter replacements</div>
+            <div class="panel-heading">All numbers up to and including the given number. Multiples of 3 are replaced with 'C.' Multiples of 5 are replaced with 'E.' Multiples of both 3 and 5 are replaced with 'Z.'</div>
             <div class="panel-body">
                 <span v-for="number in numbersWithLetterReplacements" v-if="numbersWithLetterReplacements.length > 0" track-by="$index">
                     <span>{{number}}</span><span v-if="$index !== numbersWithLetterReplacements.length - 1">, </span>
@@ -63,7 +63,7 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading">Fibonacci numbers</div>
+            <div class="panel-heading">All Fibonacci numbers up to and including the given number</div>
             <div class="panel-body">
                 <span v-for="number in fibonacciNumbers" v-if="fibonacciNumbers.length > 0">
                     <span>{{number}}</span><span v-if="$index !== fibonacciNumbers.length - 1">, </span>
