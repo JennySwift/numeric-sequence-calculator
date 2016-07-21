@@ -4,4 +4,24 @@ describe('numeric sequence calculator', function () {
         vm.userInput = 10;
         expect(vm.allNumbers).toEqual([1,2,3,4,5,6,7,8,9,10]);
     });
+
+    it('displays all odd numbers up to and including the given number', function () {
+        vm.userInput = 10;
+        expect(vm.oddNumbers).toEqual([1,3,5,7,9]);
+    });
+
+    it('displays all even numbers up to and including the given number', function () {
+        vm.userInput = 10;
+        expect(vm.evenNumbers).toEqual([2,4,6,8,10]);
+    });
+
+    it('displays all numbers up to and including the given number but replaces multiples of 3 with "C" and multiples of 5 with "E" and multiples of both 3 and 5 with "Z"', function () {
+        vm.userInput = 20;
+        expect(vm.numbersWithLetterReplacements).toEqual([1,2,'C',4,'E','C',7,8,'C','E',11,'C',13,14,'Z',16,17,'C',19,'E']);
+    });
+
+    it('displays all Fibonacci numbers up to and including the given number', function () {
+        vm.userInput = 89;
+        expect(vm.fibonacciNumbers).toEqual([0,1,1,2,3,5,8,13,21,34,55,89]);
+    });
 });
