@@ -52,7 +52,7 @@ var vm = new Vue({
             if (!this.userInput) {
                 return [];
             }
-            
+
             var array = [0,1];
             var nextFibonacciNumber = this.getNextFibonacciNumber(array);
 
@@ -79,7 +79,7 @@ var vm = new Vue({
 
     },
     data: {
-        userInput: 90,
+        userInput: '',
     },
     methods: {
         isOdd: function (number) {
