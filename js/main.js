@@ -66,7 +66,7 @@ var vm = new Vue({
         errors: function () {
             var array = [];
 
-            if (this.userInput < 0) {
+            if (this.userInput < 0 || this.userInput == "0") {
                 array.push("The input field only accepts positive numbers.")
             }
 

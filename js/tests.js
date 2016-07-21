@@ -40,6 +40,11 @@ describe('numeric sequence calculator', function () {
         expect(vm.errors).toEqual(['The input field only accepts positive numbers.']);
     });
 
+    it('displays an error if the given number is 0', function () {
+        vm.userInput = 0;
+        expect(vm.errors).toEqual(['The input field only accepts positive numbers.']);
+    });
+
     it('displays an error if the given number is not a whole number', function () {
         vm.userInput = 1.5;
         expect(vm.errors).toEqual(['The input field only accepts whole numbers.']);
@@ -52,6 +57,11 @@ describe('numeric sequence calculator', function () {
 
     it('displays no errors if the given number is a positive, whole number', function () {
         vm.userInput = 3;
+        expect(vm.errors).toEqual([]);
+    });
+
+    it('displays no errors if the given number is an empty string', function () {
+        vm.userInput = '';
         expect(vm.errors).toEqual([]);
     });
 });
