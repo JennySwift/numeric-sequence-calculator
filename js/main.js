@@ -1,4 +1,4 @@
-new Vue({
+var vm = new Vue({
     el: 'body',
     computed: {
         allNumbers: function () {
@@ -49,6 +49,7 @@ new Vue({
             return array;
         },
         fibonacciNumbers: function () {
+            //Todo: Fix this if input is blank
             var array = [0,1,1];
             var nextFibonacciNumber = this.getNextFibonacciNumber(array);
 
