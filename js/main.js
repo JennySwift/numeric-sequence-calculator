@@ -49,8 +49,11 @@ var vm = new Vue({
             return array;
         },
         fibonacciNumbers: function () {
-            //Todo: Fix this if input is blank
-            var array = [0,1,1];
+            if (!this.userInput) {
+                return [];
+            }
+            
+            var array = [0,1];
             var nextFibonacciNumber = this.getNextFibonacciNumber(array);
 
             while (nextFibonacciNumber <= this.userInput) {

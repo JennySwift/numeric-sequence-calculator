@@ -24,4 +24,14 @@ describe('numeric sequence calculator', function () {
         vm.userInput = 89;
         expect(vm.fibonacciNumbers).toEqual([0,1,1,2,3,5,8,13,21,34,55,89]);
     });
+
+    it('does not display Fibonacci numbers if there is no given number', function () {
+        vm.userInput = '';
+        expect(vm.fibonacciNumbers).toEqual([]);
+    });
+
+    it('displays all Fibonacci numbers up to and including the given number if the number is 1', function () {
+        vm.userInput = 1;
+        expect(vm.fibonacciNumbers).toEqual([0,1,1]);
+    });
 });
