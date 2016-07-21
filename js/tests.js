@@ -34,4 +34,24 @@ describe('numeric sequence calculator', function () {
         vm.userInput = 1;
         expect(vm.fibonacciNumbers).toEqual([0,1,1]);
     });
+
+    it('displays an error if the given number is negative', function () {
+        vm.userInput = -1;
+        expect(vm.errors).toEqual(['The input field only accepts positive numbers.']);
+    });
+
+    it('displays an error if the given number is not a whole number', function () {
+        vm.userInput = 1.5;
+        expect(vm.errors).toEqual(['The input field only accepts whole numbers.']);
+    });
+
+    it('displays errors if the given number is not a whole number and is negative', function () {
+        vm.userInput = -1.5;
+        expect(vm.errors).toEqual(['The input field only accepts positive numbers.', 'The input field only accepts whole numbers.']);
+    });
+
+    it('displays no errors if the given number is a positive, whole number', function () {
+        vm.userInput = 3;
+        expect(vm.errors).toEqual([]);
+    });
 });
